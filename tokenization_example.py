@@ -12,5 +12,5 @@ please watch my full tutorial! to get expert in NLP
 print("Tokenized Sentences:")
 print(sent_tokenize(corpus))
 
-print("tokenize word:")
+print("tokenize word:\np")
 print(word_tokenize(corpus))
