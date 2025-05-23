@@ -15,5 +15,5 @@ tag_elements = nltk.pos_tag(words)
 print('POS tag is:',tag_elements)
 
 #Named entity recognization
-chunk = named_entity= nltk.ne_chunk(tag_elements)
+chunk = nltk.ne_chunk(tag_elements)
 chunk.draw()
