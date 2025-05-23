@@ -21,4 +21,10 @@ for i in range(0,len(message)):
     review = [ps.stem(word) for word in review if word not in stop_words]
     review = ' '.join(review)
     corpus.append(review)
-print('After cleaning data:',corpus[:5])
+print('After cleaning data:',corpus[:5]) # we are fetching only first five data to avoid flooding (we are just showing that our code is running or not)
+
+#bag of word model making
+from sklearn.feature_extraction.text import CountVectorizer
+cv = CountVectorizer(max_features=100, binary=True)
+x = cv.fit_transform(corpus).toarray()
+print(x.shape)
