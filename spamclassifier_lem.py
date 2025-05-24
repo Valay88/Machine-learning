@@ -23,6 +23,7 @@ print('after cleaning data:',corpus[:5])
 
 # build model with use of BOW
 from sklearn.feature_extraction.text import CountVectorizer
-cv = CountVectorizer (max_features= 100, binary= True)
+cv = CountVectorizer (max_features= 200, binary= True, ngram_range=(1,2))
 x = cv.fit_transform(corpus).toarray()
 print ('first represent size of sentences & second represent feature which we use:',x.shape)
+print(cv.vocabulary_)
