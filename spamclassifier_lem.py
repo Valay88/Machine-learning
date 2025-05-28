@@ -23,6 +23,8 @@ print('after cleaning data:',corpus[:5])
 
 # build model with use of BOW
 from sklearn.feature_extraction.text import CountVectorizer
+## ngram range which is used to combination of unigram,bigram,trigram for making combination
+## Binary which is true here so it will represent only the data in (0,1) only
 cv = CountVectorizer (max_features= 200, binary= True, ngram_range=(1,2))
 x = cv.fit_transform(corpus).toarray()
 print ('first represent size of sentences & second represent feature which we use:',x.shape)
